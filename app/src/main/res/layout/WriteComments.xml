@@ -10,7 +10,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submmit"
+        android:text="submmit"
         tools:layout_editor_absoluteY="447dp"
         tools:layout_editor_absoluteX="148dp" />
 
@@ -35,7 +35,7 @@
         tools:layout_editor_absoluteX="-18dp">
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/edit_comment"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:ems="10"

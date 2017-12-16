@@ -30,5 +30,6 @@
 
     <string name="resource_button">Search</string>
     <string name="submmit_comment">Submmit</string>
+    <string name="edit_comment">edit_comment</string>
     <string name="add_comment">Comment</string>
 </resources>
