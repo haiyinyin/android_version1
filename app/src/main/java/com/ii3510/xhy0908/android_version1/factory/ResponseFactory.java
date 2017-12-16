@@ -16,6 +16,8 @@ public class ResponseFactory {
                 return new Comments();
             case "course":
                 return new Course();
+            case "software":
+                return new Software();
 
             default:
                 throw new IllegalArgumentException("Unknown resource of type " + type);
@@ -30,6 +32,8 @@ public class ResponseFactory {
                 return new Comments(in);
             case "course":
                 return new Course(in);
+            case "software":
+                return new Software(in);
 
             default:
                 throw new IllegalArgumentException("Unknown resource of type " + type);

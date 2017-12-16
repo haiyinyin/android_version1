@@ -7,4 +7,28 @@
     <string name="welcome">Welcome</string>
     <string name="logout">Logout</string>
     <string name="login_remind">Dont\' have an account? \nRegister Here</string>
+
+
+    <string name="menu">Menu</string>
+    <string name="action_course">Course</string>
+    <string name="action_comments">Comments</string>
+    <string name="action_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="course_fragment">Course Fragment</string>
+    <string name="comments_fragment">Comments Fragment</string>
+    <string name="profile_fragment">Profile Fragment</string>
+
+ 
+    <string-array name="resources">
+        <item>software</item>
+        <item>Embedded Systems</item>
+        <item>IOT</item>
+        <item>Culture and Language</item>
+
+    </string-array>
+
+    <string name="resource_button">Search</string>
+    <string name="submmit_comment">Submmit</string>
+    <string name="add_comment">Comment</string>
 </resources>
