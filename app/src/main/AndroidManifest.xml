@@ -9,7 +9,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        >
 
         <activity  android:name=".SplashActivity"
             android:label="@string/app_name">
@@ -32,7 +33,10 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".CourseRequestActivity"></activity>
+        <activity android:name=".CourseResponseActivity"></activity>
+        <activity android:name=".CourseDetailActivity"></activity>
+
 
 
     </application>

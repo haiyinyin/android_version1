@@ -60,6 +60,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        Button btnNextScreen1 = (Button) findViewById(R.id.Tourist_button);
+        //Listening to button event
+        btnNextScreen1.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                //Starting a new Intent
+                Intent nextScreen = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(nextScreen);
+
+            }
+        });
+
     }
 
 }
