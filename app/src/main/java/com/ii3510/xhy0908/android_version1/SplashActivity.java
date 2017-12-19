@@ -12,8 +12,7 @@ import android.os.Handler;
 import com.ii3510.xhy0908.android_version1.global.AppConstants;
 import com.ii3510.xhy0908.android_version1.utils.SpUtils;
 
-
-    /**
+/**
      * @desc 启动屏
      * Created by devilwwj on 16/1/23.
      */

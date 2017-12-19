@@ -15,8 +15,9 @@ import android.content.Intent;
 import com.ii3510.xhy0908.android_version1.LoginActivity;
 
 import android.content.SharedPreferences;
-
+import android.content.Context;
 import java.util.jar.Attributes;
+
 
 /**
  * Created by xhy0908 on 2017/11/28.
@@ -34,13 +35,14 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("HomeActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         bottomNavigation = (BottomNavigationView)findViewById(R.id.bottom_navigation);
         bottomNavigation.inflateMenu(R.menu.bottom_menu);
         fragmentManager = getSupportFragmentManager();
 
-        final SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREF_NAME,0);
+
 
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -53,13 +55,18 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.action_comments:
                         fragment = new CommentsFragment();
                         break;
-                    case R.id.action_profile:
-                        if(sharedPreferences.getString("nameKey", null) == null){
-                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                        }
 
-                        else
-                        {fragment = new ProfileFragment();
+                    case R.id.action_profile:
+                        SharedPreferences pref = getSharedPreferences("MyPref",MODE_PRIVATE);
+                        String str =pref.getString("nameKey",null);
+                        if(str==null)
+                        //sharedPreferences.getString("nameKey", null) == null
+                        {
+                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                            break;
+                        }else{
+
+                        fragment = new ProfileFragment();
                         break;}
 
                 }

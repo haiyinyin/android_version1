@@ -22,6 +22,7 @@ public class CourseDetailActivity extends AppCompatActivity {
     private final String SELECTED_RESPONSE_EXTRA = "SELECTED_RESPONSE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("CourseDetailActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_detail);
 

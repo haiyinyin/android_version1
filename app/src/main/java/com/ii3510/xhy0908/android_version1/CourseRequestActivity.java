@@ -24,7 +24,7 @@ import org.json.JSONArray;
  */
 
 public class CourseRequestActivity extends AppCompatActivity {
-    private final String URL_BASE = "http://172.16.236.86:3000";
+    private final String URL_BASE = "http://10.188.48.80:3000";
     private final String TYPES_OF_RESOURCE_EXTRA = "TYPES_OF_RESOURCE";
     private final String RESPONSE_EXTRA = "RESPONSE";
     private String resourceString;
@@ -32,7 +32,8 @@ public class CourseRequestActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_course_request);
+        setContentView(R.layout.activity_course_request);
+
         // When Extras are passed in Intents, we can retrieve the information back with the next two lines
         Intent intent = getIntent();
         resourceString = intent.getStringExtra(TYPES_OF_RESOURCE_EXTRA);
@@ -46,10 +47,13 @@ public class CourseRequestActivity extends AppCompatActivity {
         searchButton.setOnClickListener(new View.OnClickListener() {
            // @Override
             public void onClick(View view) {
-                String url = URL_BASE + "/" + resourceString;
+
+                // String url = URL_BASE + "/" + resourceString;
+                String url="http://10.188.48.80:3000/software";
                 doQuery(url);
             }
         });
+
     }
 
     private void doQuery(String url) {

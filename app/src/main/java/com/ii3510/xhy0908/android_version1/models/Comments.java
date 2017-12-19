@@ -15,65 +15,71 @@ import java.util.HashMap;
 public class Comments implements Response{
 
     private int cid;
-    private String subject;
+    private String name;
     private String content;
+    private String time;
     private String user;
 
-
-    //constructor
-    public Comments() {
-    }
-
-    public Comments(Parcel in) {
-        this.cid = in.readInt();
-        this.subject = in.readString();
-        this.content = in.readString();
-        this.user = in.readString();
+    public Comments(){
 
     }
+
+    public Comments(Parcel in){
+        this.cid=in.readInt();
+        this.name=in.readString();
+        this.content=in.readString();
+        this.time=in.readString();
+        this.user=in.readString();
+
+    }
+
     @Override
     public void initialiseWithJson(JSONObject jsonObject) throws JSONException {
-        int cid = jsonObject.getInt(COMMENTS_ID);
-        String subject = jsonObject.getString(COURSE_NAME);
-        String content = jsonObject.getString(CONTENT);
-        String user = jsonObject.getString(FIRST_NAME);
+        int cid=jsonObject.getInt(COMMENTS_ID);
+        String name=jsonObject.getString(COURSE_NAME);
+        String content=jsonObject.getString(CONTENT);
+        String time=jsonObject.getString(COMMENT_TIME);
+        String user=jsonObject.getString(COMMENT_USER);
 
-        this.cid = cid;
-        this.subject = subject;
-        this.content = content;
-        this.user = user;
-
+        this.cid=cid;
+        this.name=name;
+        this.content=content;
+        this.time=time;
+        this.user=user;
 
     }
 
     @Override
     public HashMap<String, String> getDetails() {
-        HashMap<String, String> hashMap = new HashMap<>();
-        hashMap.put(COMMENTS_ID, String.valueOf(cid));
-        hashMap.put(COURSE_NAME, subject);
-        hashMap.put(CONTENT, content);
-        hashMap.put(USER, user);
-
+        HashMap<String, String>hashMap=new HashMap<>();
+        hashMap.put(COMMENTS_ID,String.valueOf(cid));
+        hashMap.put(COURSE_NAME,name);
+        hashMap.put(CONTENT,content);
+        hashMap.put(COMMENT_TIME,time);
+        hashMap.put(COMMENT_USER,user);
         return hashMap;
     }
 
     @Override
     public String getName() {
-        return this.subject;
+        return this.name;
+    }
+
+
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(this.cid);
-        parcel.writeString(this.subject);
+        parcel.writeString(this.name);
         parcel.writeString(this.content);
+        parcel.writeString(this.time);
         parcel.writeString(this.user);
 
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
     }
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
@@ -86,35 +92,6 @@ public class Comments implements Response{
         }
     };
 
-    public int getCid() {
-        return cid;
-    }
 
-    public void setCid(int cid) {
-        this.cid = cid;
-    }
 
-    public String getSubject() {
-        return subject;
-    }
-
-    public void setSubject(String subject) {
-        this.subject = subject;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
 }

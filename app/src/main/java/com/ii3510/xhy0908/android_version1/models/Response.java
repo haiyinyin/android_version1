@@ -18,16 +18,26 @@ public interface Response extends Parcelable {
     String LAST_NAME = "lstname";
     String PASSWORD = "password";
     String STUDENT_GRADE = "grade";
-    String COURSE_NAME = "name";
-    String CONTENT = "username";
+
+
     String USER = "user";
+
+
+    //COURSE  与JSON server匹配
     String COURSE_ID = "coid";
+    //+COURSE NAME
     String COURSE_LEVEL="level";
-    String COMMENTS_ID="cid";
     String PROFESSOR="professor";
     String SALLE="salle";
     String TIME="time";
+    String MAJOR="major";
 
+    //COMMENTS
+    String COMMENTS_ID="cid";
+    String COURSE_NAME = "name";
+    String CONTENT = "content";
+    String COMMENT_TIME="time";
+    String COMMENT_USER="user";
 
     void initialiseWithJson(JSONObject jsonObject) throws JSONException;
 
@@ -42,5 +52,6 @@ public interface Response extends Parcelable {
      * @return The name or title of a Response object
      */
     String getName();
+
 
 }

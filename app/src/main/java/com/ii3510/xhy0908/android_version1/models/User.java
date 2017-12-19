@@ -84,6 +84,8 @@ public class User implements Response{
         return this.fstname;
     }
 
+
+
     @Override
     public int describeContents() {
         return 0;

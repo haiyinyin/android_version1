@@ -14,10 +14,18 @@ public class ResponseFactory {
                 return new User();
             case "comments":
                 return new Comments();
-            case "course":
-                return new Course();
+
             case "software":
-                return new Software();
+                return new Course();
+
+            case "embedded":
+                return new Course();
+
+            case "IOT":
+                return new Course();
+
+            case "culture":
+                return new Course();
 
             default:
                 throw new IllegalArgumentException("Unknown resource of type " + type);
@@ -30,11 +38,18 @@ public class ResponseFactory {
                 return new User(in);
             case "comments":
                 return new Comments(in);
+
             case "course":
                 return new Course(in);
-            case "software":
-                return new Software(in);
 
+            case "embedded":
+                return new Course(in);
+
+            case "IOT":
+                return new Course(in);
+
+            case "culture":
+                return new Course(in);
             default:
                 throw new IllegalArgumentException("Unknown resource of type " + type);
         }

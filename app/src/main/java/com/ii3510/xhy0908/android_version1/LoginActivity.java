@@ -25,7 +25,9 @@ import android.content.SharedPreferences;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import com.ii3510.xhy0908.android_version1.models.User;
+import com.ii3510.xhy0908.android_version1.SharedPrefManager;
+import android.content.SharedPreferences.Editor;
 
 
 import android.app.Activity;
@@ -40,6 +42,7 @@ public class LoginActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("LoginActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -80,12 +83,14 @@ public class LoginActivity extends Activity {
 
     private void userLogin() {
 
-
         final String inputUsername = editTextUsername.getText().toString();
         final String inputPassword = editTextPassword.getText().toString();
-        String URL_USER = "http://172.16.236.86:3000/user?fstname=haiyin";
 
 
+
+        String URL_USER = URLs.URL_LOGIN + "?fstname=" + inputUsername;
+
+        System.out.printf(URL_USER);
         //validating inputs
         if (TextUtils.isEmpty(inputUsername)) {
             editTextUsername.setError("Please enter your username");
@@ -100,11 +105,12 @@ public class LoginActivity extends Activity {
         }
 
 
-        final String SHARED_PREF_NAME = "shared_pref_name";
+        final String SHARED_PREF_NAME = "MyPref";
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE );
-        final SharedPreferences.Editor editor = sharedPreferences.edit();
+        final Editor editor = sharedPreferences.edit();
 
         final String Name = "nameKey";
+
 
 
 

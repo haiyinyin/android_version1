@@ -22,9 +22,9 @@
  
     <string-array name="resources">
         <item>software</item>
-        <item>Embedded Systems</item>
+        <item>embedded</item>
         <item>IOT</item>
-        <item>Culture and Language</item>
+        <item>culture</item>
 
     </string-array>
 

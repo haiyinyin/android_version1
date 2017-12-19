@@ -36,6 +36,9 @@
         <activity android:name=".CourseRequestActivity"></activity>
         <activity android:name=".CourseResponseActivity"></activity>
         <activity android:name=".CourseDetailActivity"></activity>
+        <activity android:name=".WriteCommentsActivity"></activity>
+        <activity android:name=".CheckCommentsResponseActivity"></activity>
+        <activity android:name=".CommentsDetailActivity"></activity>
 
 
 

@@ -29,6 +29,7 @@ public class CourseResponseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("CourseResponseActivity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_response);
         try {
