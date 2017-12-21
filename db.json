@@ -1,0 +1,75 @@
+{
+  "user": [
+    {
+      "id": 6,
+      "identity": "student",
+      "fstname": "haiyin",
+      "lstname": "xu",
+      "password": "19930908",
+      "grade": "a3"
+    }
+  ],
+  "Comments":  [
+    {
+      "cid": 1,
+      "name": "homework",
+      "content": "WANG",
+      "time":"wednesday",
+      "user":"L315"
+
+    },
+ {
+      "cid": 2,
+      "name": "android",
+      "content": "WANG",
+      "time":"wednesday",
+      "user":"L315"
+
+    }
+  ],
+ 
+"Course": [
+    {
+      "coid": 1,
+      "name": "ii3510 android",
+      "level": "a3",
+"professor": "M.WANG",
+"time":"wednesday",
+"salle":"L315",
+"major":"software"
+
+    }
+,
+    {
+      "coid": 2,
+      "name": "ie3511 robot",
+      "level": "a3",
+"professor": "M.ROBERT",
+"time":"Moday",
+"salle":"NDC",
+"major":"embedded"
+
+    }
+ ,
+    {
+      "coid": 3,
+      "name": "ir3505 routage",
+      "level": "a3",
+"professor": "M.PELTIER",
+"time":"wednesday",
+"salle":"NDC",
+"major":"IOT"
+    }
+ ,
+    {
+      "coid": 4,
+      "name": "il3504 English",
+      "level": "a3",
+"professor": "Mme.STEFANATOS",
+"time":"Friday",
+"salle":"NDC",
+"major":"other"
+
+    }
+  ]
+}
